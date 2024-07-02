@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaSearch, FaLanguage, FaBars, FaTimes } from 'react-icons/fa';
 import { HiOutlineClipboardList } from 'react-icons/hi';
 import { MdEmail, MdPhone } from 'react-icons/md';
-
+import logo from '../assets/logo.png'
+import secondlogo from '../assets/secondlogo.png'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -17,8 +18,8 @@ const Navbar = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center py-2 border-b px-">
   <div className="flex items-center justify-between w-full lg:w-auto">
     <div className="flex items-center space-x-4">
-      <img src="/src/assets/logo.png" alt="Aafiya Mediretreats" className="h-14 w-[14rem] lg:h-16" />
-      <img src="/src/assets/secondlogo.png" alt="Secondary Logo" className="h-10 w-auto lg:h-14 hidden lg:block" />
+      <img src={logo} alt="Aafiya Mediretreats" className="h-14 w-[14rem] lg:h-16" />
+      <img src={secondlogo} alt="Secondary Logo" className="h-10 w-auto lg:h-14 hidden lg:block" />
     </div>
     <div className="flex items-center lg:hidden">
       <FaLanguage className="h-6 w-6 mr-2 text-blue-500" />
