@@ -6,7 +6,7 @@ const NeedHelp = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
       <h3 className="text-4xl font-bold mb-4 text-blue-500">Need Help?</h3>
       <p className="mb-4 text-blue-500">Just let us know. We will be happy to assist you.</p>
       <form className="space-y-4" onSubmit={handleSubmit}>

@@ -3,6 +3,7 @@ import NeedHelp from './NeedHelp';
 import FAQs from '../Components/FAQs';
 import PatientStories from '../Components/PatientStories';
 import TopDoctors from '../Components/TopDoctors';
+import RecommendedHospitals from './RecommendedHospitals'
 const TreatmentOverview = () => {
     const overviewRef = useRef(null);
     const eligibilityRef = useRef(null);
@@ -13,6 +14,7 @@ const TreatmentOverview = () => {
     const faqsRef = useRef(null);
     const patientStoriesRef = useRef(null);
     const topDoctorsRef = useRef(null);
+    const recommendedHospitalsRef = useRef(null);
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
@@ -20,7 +22,7 @@ const TreatmentOverview = () => {
     return (
         <div className=" font-sans">
             <div className='container mx-auto p-4'>
-            <nav className="flex space-x-4 mb-8 border-b pb-4 overflow-x-auto">
+            <nav className="flex space-x-8 mb-8 border-b pb-4 overflow-x-auto">
                 <button onClick={() => scrollToSection(overviewRef)} className="text-blue-600 hover:text-blue-800 whitespace-nowrap">Overview</button>
                 <button onClick={() => scrollToSection(eligibilityRef)} className="text-blue-600 hover:text-blue-800 whitespace-nowrap">Eligibility</button>
                 <button onClick={() => scrollToSection(preparationRef)} className="text-blue-600 hover:text-blue-800 whitespace-nowrap">Preparation</button>
@@ -135,7 +137,7 @@ const TreatmentOverview = () => {
                     </div>
     
                     <hr className="border-dashed border-blue-200 my-8" />
-    
+                   
                 </div>
     
                 <div className="lg:w-1/3">
@@ -146,6 +148,9 @@ const TreatmentOverview = () => {
             <div ref={topDoctorsRef}>
                         <TopDoctors />
                     </div>
+                    <div ref={recommendedHospitalsRef}>
+                    <RecommendedHospitals />
+                </div>
         </div>
     );
 };
